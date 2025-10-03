@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bright Star — Example Site</title>
+  <meta name="description" content="A simple permanent website template." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Bright Star</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>Welcome!</h2>
+      <p>Create. Perform. Shine.</p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About</h3>
+      <p>This is a lightweight static site perfect for long-term hosting and easy updates.</p>
+    </section>
+
+    <section id="services" class="card">
+      <h3>Services</h3>
+      <ul>
+        <li>Acting classes</li>
+        <li>Workshops</li>
+        <li>Online resources</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <form id="contactForm" action="https://formspree.io/f/your-id" method="POST">
+        <label>
+          Name
+          <input name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p id="status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Bright Star — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
