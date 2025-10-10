@@ -1,25 +1,97 @@
-<body>
-    <header>
-        <h1>Welcome to Stalina’s Website 🌟</h1>
-        <p>Actress • Teacher • Creator</p>
-    </header>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <img src="myphoto.jpg" alt="My Photo" width="200">
-            <p>Hello! My name is Stalina. I am an actress and educator. 
-            On this website you will find my projects, classes, and creative work.</p>
-        </section>
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff9f2;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+  overflow-x: hidden;
+}
 
-        <section>
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-            <p>Instagram: <a href="https://instagram.com/yourprofile" target="_blank">@yourprofile</a></p>
-        </section>
-    </main>
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(to right, #ff914d, #ffbb73);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    <footer>
-        <p>© 2025 Stalina</p>
-    </footer>
-</body>
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 5px;
+}
+
+nav a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #fff3e0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background-color: #fff5e6;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 3px dashed #ffb380;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  background: #ff914d;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffb380;
+  transform: scale(1.05);
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  margin: 30px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.card ul {
+  text-align: left;
+  list-style: none;
+  margin:
