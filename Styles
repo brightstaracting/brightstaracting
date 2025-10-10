@@ -1,73 +1,69 @@
-body {
-  font-family: 'Poppins', sans-serif;
+/* ===== GLOBAL STYLES ===== */
+* {
   margin: 0;
-  background-color: #fff9f2;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff9f2;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
 header {
-  background: linear-gradient(to right, #ff914d, #ffcf99);
+  background: linear-gradient(to right, #ff914d, #ffbb73);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 25px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 5px;
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 0 12px;
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
-
-.hero {
-  background-color: #fff5e6;
-  padding: 40px;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #ff914d;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #ffb380;
+nav a:hover {
+  text-decoration: underline;
+  color: #fff3e0;
 }
 
-.card {
-  margin: 30px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 80%;
+/* ===== HERO SECTION ===== */
+.hero {
+  background-color: #fff5e6;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 3px dashed #ffb380;
 }
 
-ul { text-align: left; display: inline-block; }
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
 
-footer {
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
   background: #ff914d;
   color: white;
-  text-align: center;
-  padding: 15px;
-}
+  padding: 10px 25px
 
-.gallery img {
-  width: 30%;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-
-.profile {
-  width: 200px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 20px;
-}
