@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Bright Star Acting Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>👩‍🎭 About Me</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="classes.html">Classes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="card">
+  <img src="images/teacher.jpg" alt="Stalina photo" class="profile" />
+  <p>Hi! I’m Stalina, a professional actress and graduate of NYU Tisch School of the Arts. I founded Bright Star Acting Studio to help children express themselves confidently, develop creativity, and fall in love with theater.</p>
+</section>
+</body>
+</html>
