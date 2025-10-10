@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stalina’s Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Star Acting Studio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="hero">
-        <h1>✨ Stalina ✨</h1>
-        <p>Actress • Teacher • Creator</p>
-        <a href="#about" class="btn">Learn More</a>
-    </header>
+  <header>
+    <h1>🌟 Bright Star Acting Studio 🎭</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="classes.html">Classes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <img src="myphoto.jpg" alt="My Photo" class="profile-pic">
-            <p>Hello! My name is Stalina. I am an actress and educator. 
-            On this website you will find my projects, classes, and creative work.</p>
-        </section>
+  <section class="hero">
+    <h2>Welcome to Bright Star Acting Studio! 🎭✨</h2>
+    <p>At Bright Star, kids gain confidence, creativity, and stage skills — while having fun!</p>
+    <a class="btn" href="#trial">Book Free Trial Lesson</a>
+  </section>
 
-        <section id="portfolio" class="section">
-            <h2>Projects</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>🎭 Acting</h3>
-                    <p>Stage and film performances, self-tapes, and creative collaborations.</p>
-                </div>
-                <div class="card">
-                    <h3>🎨 Teaching</h3>
-                    <p>Drama classes for children and teens: acting, improv, creativity.</p>
-                </div>
-                <div class="card">
-                    <h3>🌟 Studio</h3>
-                    <p>Founder of Bright Star Acting Studio in Brighton Beach, NY.</p>
-                </div>
-            </div>
-        </section>
+  <section id="trial" class="card">
+    <h3>Book Your First Free Class</h3>
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <label>Parent’s Name<input type="text" name="Parent Name" required></label>
+      <label>Child’s Name & Age<input type="text" name="Child Name and Age" required></label>
+      <label>Email<input type="email" name="Email" required></label>
+      <label>Phone<input type="text" name="Phone"></label>
+      <label>Message<textarea name="Message"></textarea></label>
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+  </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-            <p>Instagram: <a href="https://instagram.com/yourprofile" target="_blank">@yourprofile</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Stalina</p>
-    </footer>
+  <footer>
+    <p>© 2025 Bright Star Acting Studio — 3063 Brighton 8th St, Brooklyn, NY 11235</p>
+  </footer>
 </body>
 </html>
+
