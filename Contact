@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Bright Star Acting Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>📞 Contact Us</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="classes.html">Classes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="card">
+  <p>📍 3063 Brighton 8th Street, Brooklyn, NY 11235</p>
+  <p>📅 Monday & Wednesday, 5 PM</p>
+  <p>☎️ <a href="tel:3474617236">347 461 7236</a></p>
+  <p>✉️ <a href="mailto:brightstaractingstudio@gmail.com">brightstaractingstudio@gmail.com</a></p>
+  <p>📸 <a href="https://instagram.com/brightstaracting" target="_blank">@brightstaracting</a></p>
+</section>
+</body>
+</html>
