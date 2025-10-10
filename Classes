@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes — Bright Star Acting Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>🎭 Our Classes</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="classes.html">Classes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="card">
+  <p>🎭 Classes for kids ages 7–13 include:</p>
+  <ul>
+    <li>🗣 Stage speech – speak clearly and confidently</li>
+    <li>👯 Stage movement – express yourself through body and presence</li>
+    <li>🤩 Acting games – spark creativity and imagination</li>
+    <li>🎭 Etudes & performances – step onto the stage with confidence</li>
+    <li>🤝 Teamwork skills – collaborate, support, and grow together</li>
+  </ul>
+  <p>⭐️ All classes are taught by a professional actress and NYU Tisch School of the Arts graduate, bringing real-world experience and passion to every lesson.</p>
+
+  <h3>Schedule</h3>
+  <p>🕔 Monday & Wednesday — 5 PM</p>
+
+  <h3>Payment Options</h3>
+  <p><a class="btn" href="https://buy.stripe.com/5kQ6oG3bM21hd7C3L23ZK06">$150 — First 8 Classes (New Students)</a></p>
+  <p><a class="btn" href="https://buy.stripe.com/8x25kCeUu8pFaZuepG3ZK09">$250 — 8 Classes (After Trial Month)</a></p>
+  <p><a class="btn" href="https://buy.stripe.com/6oU28qaEecFV7NigxO3ZK0a">$35 — One Class</a></p>
+</section>
+</body>
+</html>
