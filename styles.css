@@ -51,7 +51,7 @@ nav a:hover {
   text-align: center;
   padding: 100px 20px;
   background-image: linear-gradient(rgba(255, 145, 77, 0.6), rgba(255, 145, 77, 0.6)), 
-  url('kids-class.jpg');   /* 👈 if your image is inside /images/, use: url('images/kids-class.jpg'); */
+  url('kids-class.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -120,6 +120,27 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
+/* ===== GALLERY STYLES ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+}
+
+.gallery img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #ff7b00;
@@ -147,5 +168,9 @@ footer {
   .card {
     width: 90%;
     padding: 20px;
+  }
+
+  .gallery img {
+    width: 90%;
   }
 }
