@@ -49,13 +49,19 @@ nav a:hover {
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-background-image: linear-gradient(rgba(255,145,77,0.6), rgba(255,145,77,0.6)),
-url('images/kids-class.jpg');
+  padding: 100px 20px;
+  background-image: linear-gradient(rgba(255, 145, 77, 0.6), rgba(255, 145, 77, 0.6)), 
+  url('kids-class.jpg');   /* 👈 if your image is inside /images/, use: url('images/kids-class.jpg'); */
   background-size: cover;
   background-position: center;
   color: white;
   border-bottom: 4px solid #ffb380;
+  animation: fadeInHero 1s ease;
+}
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .hero h2 {
@@ -67,6 +73,7 @@ url('images/kids-class.jpg');
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto 20px auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* ===== BUTTONS ===== */
@@ -80,6 +87,7 @@ url('images/kids-class.jpg');
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: inline-block;
 }
 
 .btn:hover {
@@ -102,30 +110,14 @@ url('images/kids-class.jpg');
 
 .card h3 {
   color: #ff7b00;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== FORM ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 15px;
-}
-
-form input,
-form textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  margin-top: 10px;
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 /* ===== FOOTER ===== */
@@ -136,4 +128,24 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   margin-top: 50px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
 }
