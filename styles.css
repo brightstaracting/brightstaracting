@@ -50,7 +50,8 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background-image: linear-gradient(rgba(255, 145, 77, 0.6), rgba(255, 145, 77, 0.6)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+background-image: linear-gradient(rgba(255,145,77,0.6), rgba(255,145,77,0.6)),
+url('images/kids-class.jpg');
   background-size: cover;
   background-position: center;
   color: white;
