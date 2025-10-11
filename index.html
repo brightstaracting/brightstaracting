@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bright Star Acting Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
-<script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <canvas id="stars"></canvas>
+
   <header>
     <h1>🌟 Bright Star Acting Studio 🎭</h1>
     <nav>
@@ -21,21 +23,44 @@
   </header>
 
   <section class="hero">
-    <h2>Welcome to Bright Star Acting Studio! 🎭✨</h2>
-    <p>At Bright Star, kids gain confidence, creativity, and stage skills — while having fun!</p>
-    <a class="btn" href="#trial">Book Free Trial Lesson</a>
+    <h2>Welcome to Bright Star Acting Studio!</h2>
+    <p>Where kids shine, create, and perform with confidence.</p>
+    <a class="btn" href="#trial">Book Free Trial Class</a>
   </section>
 
   <section id="trial" class="card">
-    <h3>Book Your First Free Class</h3>
-    <form action="https://formspree.io/f/xrbyyopy" method="POST">
-      <label>Parent’s Name<input type="text" name="Parent Name" required></label>
-      <label>Child’s Name & Age<input type="text" name="Child Name and Age" required></label>
-      <label>Email<input type="email" name="Email" required></label>
-      <label>Phone<input type="text" name="Phone"></label>
-      <label>Message<textarea name="Message"></textarea></label>
+    <h3>Sign Up for a Free Trial Class</h3>
+    <p>Tell us a bit about your child and we’ll confirm your spot.</p>
+
+    <form action="https://formspree.io/f/mwprrwob" method="POST">
+      <label>Parent’s Name
+        <input type="text" name="parent_name" placeholder="Parent’s Name" required>
+      </label>
+
+      <label>Child’s Name & Age
+        <input type="text" name="child_name_age" placeholder="e.g., Emma, 9" required>
+      </label>
+
+      <label>Email
+        <input type="email" name="email" placeholder="name@example.com" required>
+      </label>
+
+      <label>Phone (optional)
+        <input type="text" name="phone" placeholder="347-461-7236">
+      </label>
+
+      <label>Message (optional)
+        <textarea name="message" placeholder="Any questions or preferred date?"></textarea>
+      </label>
+
       <button class="btn" type="submit">Send Request</button>
     </form>
+  </section>
+
+  <section class="card">
+    <h3>Our Classes</h3>
+    <p>🎭 Acting • 🎤 Voice • 💃 Stage Movement • 🎬 On-Camera</p>
+    <p>Classes for ages 7–13 • Mondays & Wednesdays at 5 PM</p>
   </section>
 
   <footer>
