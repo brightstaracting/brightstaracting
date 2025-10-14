@@ -35,7 +35,7 @@
     .gallery img {
       width: 100%;
       height: 250px;
-      object-fit: cover;
+      object-fit: cover; /* keeps thumbnails uniform */
       border-radius: 12px;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -46,7 +46,7 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
-    /* Lightbox */
+    /* Lightbox styling */
     .lightbox {
       display: none;
       position: fixed;
@@ -55,15 +55,17 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
 
     .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
+      max-width: 95%;
+      max-height: 90%;
       border-radius: 10px;
+      object-fit: contain; /* shows full original proportions */
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
@@ -100,7 +102,7 @@
     </div>
   </section>
 
-  <!-- Lightbox images -->
+  <!-- Lightbox full images -->
   <div class="lightbox" id="img1"><a href="#"><img src="gallery/IMG.1.PNG" alt=""></a></div>
   <div class="lightbox" id="img2"><a href="#"><img src="gallery/IMG.2.PNG" alt=""></a></div>
   <div class="lightbox" id="img3"><a href="#"><img src="gallery/IMG.6.PNG" alt=""></a></div>
@@ -110,4 +112,7 @@
 
   <footer>
     <p>© 2025 Bright Star Acting Studio</p>
-  </foo
+  </footer>
+</body>
+</html>
+
