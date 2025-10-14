@@ -35,6 +35,7 @@
       line-height: 1.6;
     }
 
+    /* ===== HEADER & NAV ===== */
     header {
       background: linear-gradient(90deg, var(--brand), var(--brand-2));
       color: #fff;
@@ -43,9 +44,29 @@
       box-shadow: var(--shadow);
     }
 
-    header a {
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
       color: #fff;
       text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    nav a[style*="underline"] {
+      text-decoration: underline;
     }
 
     .container {
@@ -90,6 +111,7 @@
     .main h2 {
       margin: 0 0 10px;
       font-size: clamp(22px, 2.6vw, 30px);
+      color: var(--brand);
     }
 
     .subtitle {
@@ -129,8 +151,14 @@
 </head>
 <body>
   <header>
-    <h1><a href="index.html">Meet Stalina — Founder & Artistic Director</a></h1>
-    <p>Bright Star Acting Studio, Brooklyn, NY</p>
+    <h1>🌟 Bright Star Acting Studio 🎭</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="classes.html">Classes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html" style="text-decoration: underline;">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main class="container">
@@ -140,7 +168,7 @@
       </aside>
 
       <article class="card main">
-        <h2>About the Teacher</h2>
+        <h2>Meet Stalina — Founder & Artistic Director</h2>
         <p class="subtitle">Professional actress and theater educator based in Brooklyn, New York.</p>
 
         <p>Originally from Ukraine, <strong>Stalina Guberchenko</strong> is a professional actress, theater educator, and the founder of <strong>Bright Star Acting Studio</strong> in Brooklyn, New York. She is a <strong>graduate of New York University Abu Dhabi and NYU Tisch School of the Arts</strong>, where she transferred after two years to continue her professional training at the <strong>Lee Strasberg Theatre &amp; Film Institute</strong>. Her studies focused on <em>Method Acting, Acting for Film &amp; TV, Character Development, Movement, Voice and Speech,</em> and <em>Stage Combat</em>, guided by renowned theater professionals.</p>
