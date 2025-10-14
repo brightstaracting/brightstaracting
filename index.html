@@ -37,6 +37,51 @@
       <button class="btn" type="submit">Send Request</button>
     </form>
   </section>
+<!-- ===== BOOK YOUR FIRST CLASS SECTION ===== -->
+<section id="book-class" style="background:#fff9f2; padding:60px 20px; text-align:center;">
+  <div style="max-width:700px; margin:0 auto;">
+    <h2 style="font-size:2rem; color:#ff7b00; margin-bottom:10px;">
+      Book Your First Free Class
+    </h2>
+    <p style="color:#555; margin-bottom:30px;">
+      Fill out the form below and we’ll reach out to schedule your child’s first trial class!
+    </p>
+
+    <form id="contact-form" style="display:grid; gap:15px; text-align:left;">
+      <input type="text" name="parent-name" placeholder="Parent’s Name" required
+             style="padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px; font-size:1rem;">
+      <input type="text" name="child-name" placeholder="Child’s Name & Age" required
+             style="padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px; font-size:1rem;">
+      <input type="email" name="email" placeholder="Email Address" required
+             style="padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px; font-size:1rem;">
+      <input type="tel" name="phone" placeholder="Phone Number" required
+             style="padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px; font-size:1rem;">
+      <textarea name="message" placeholder="Message (optional)"
+                style="padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px; font-size:1rem; min-height:100px;"></textarea>
+
+      <button type="submit" style="background:linear-gradient(90deg,#ff7b00,#ffb84d); color:white;
+              border:none; border-radius:999px; padding:14px 22px; font-size:1.1rem;
+              font-weight:600; cursor:pointer; transition:transform 0.2s;">
+        Send Request
+      </button>
+    </form>
+
+    <p id="thankyou-message" style="display:none; margin-top:25px; color:#2b8a3e; font-weight:600;">
+      ✅ Thank you! We’ll contact you soon to confirm your child’s first class.
+    </p>
+  </div>
+</section>
+
+<script>
+  // simple thank-you message after submission
+  const form = document.getElementById('contact-form');
+  const thankyou = document.getElementById('thankyou-message');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.style.display = 'none';
+    thankyou.style.display = 'block';
+  });
+</script>
 
   <footer>
     <p>© 2025 Bright Star Acting Studio — 3063 Brighton 8th St, Brooklyn, NY 11235</p>
