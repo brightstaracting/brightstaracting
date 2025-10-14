@@ -1,26 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Bright Star Acting Studio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Bright Star Acting Studio | Stalina Guberchenko</title>
+  <meta name="description" content="Meet Stalina Guberchenko — founder & artistic director of Bright Star Acting Studio. Professional actress and theater educator based in Brooklyn, NY." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="About — Bright Star Acting Studio | Stalina Guberchenko" />
+  <meta property="og:description" content="Originally from Ukraine, Stalina is a professional actress and theater educator — founder of Bright Star Acting Studio in Brooklyn, NY." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://brightstaracting.github.io/brightstaracting/images/stalina.jpg" />
+  <meta property="og:url" content="https://brightstaracting.github.io/brightstaracting/about.html" />
+  <base href="/brightstaracting/">
+
+  <style>
+    :root {
+      --bg: #fff9f2;
+      --bg2: #fff2e0;
+      --text: #222;
+      --muted: #5b5b5b;
+      --brand: #ff7b00;
+      --brand-2: #ffb84d;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: var(--shadow);
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .about {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+      grid-template-columns: 1fr;
+      margin-top: 28px;
+    }
+
+    @media (min-width: 860px) {
+      .about {
+        grid-template-columns: 420px 1fr;
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .main {
+      padding: 22px;
+    }
+
+    .main h2 {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 2.6vw, 30px);
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .main p {
+      margin: 12px 0;
+    }
+
+    .cta {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.1s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 40px 12px;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>👩‍🎭 About Me</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="classes.html">Classes</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1><a href="index.html">Meet Stalina</a></h1>
+    <p>Founder & Artistic Director, Bright Star Acting Studio</p>
+  </header>
 
-<section class="card">
-  <img src="images/teacher.jpg" alt="Stalina photo" class="profile" />
-  <p>Hi! I’m Stalina, a professional actress and graduate of NYU Tisch School of the Arts. I founded Bright Star Acting Studio to help children express themselves confidently, develop creativity, and fall in love with theater.</p>
-</section>
+  <main class="container">
+    <section class="about">
+      <aside class="card photo">
+        <img src="images/stalina.jpg" alt="Portrait of Stalina Guberchenko" />
+      </aside>
+
+      <article class="card main">
+        <h2>Originally from Ukraine</h2>
+        <p class="subtitle">Professional actress and theater educator based in Brooklyn, New York.</p>
+
+        <p>Originally from <strong>Ukraine</strong>, Stalina Guberchenko is a professional actress, theater educator, and the founder of <strong>Bright Star Acting Studio</strong> in Brooklyn, New York. She is a <strong>graduate of New York University Abu Dhabi and NYU Tisch School of the Arts</strong>, where she transferred after two years to continue her professional training at the <strong>Lee Strasberg Theatre &amp; Film Institute</strong>. Her studies focused on <em>Method Acting, Acting for Film &amp; TV, Character Development, Movement, Voice and Speech,</em> and <em>Stage Combat</em>, guided by renowned theater professionals.</p>
+
+        <p>Her stage experience includes <em>Fair Winds and Winds of War</em> at <strong>Theater for the New City</strong>, <em>The Caucasian Chalk Circle</em> at the <strong>NYUAD Arts Center</strong>, <em>The Duchess of LES</em> at the <strong>Kraine Theatre</strong>, <em>Your Faithful Reader</em> at <strong>Teatro LATEA</strong>, and <em>Kholstomer</em>, <em>Omar Khayyam</em>, and <em>Equus</em> at <strong>Essence Theater</strong>. She also performed in multiple theater installations at the <strong>Abu Dhabi Art Festival</strong> and <strong>Expo Dubai</strong>, bringing immersive storytelling to international audiences.</p>
+
+        <p>On screen, Stalina has played lead roles in short films such as <em>Just a Little Longer</em> (shot in Baltimore), <em>Mom Said Always Be Nice</em> (shot in New York), and <em>Snarly Yow</em> (shot in West Virginia). She also appeared in the Ukrainian television series <em>Vskritie Pokazhet</em> and <em>Slipa</em>, and continues to act in <strong>commercials, brand projects, and music videos</strong> for various companies and artists.</p>
+
+        <p>Beyond acting, Stalina has extensive experience teaching and inspiring children around the world. She has worked as an <strong>acting instructor, creative director, and theater educator</strong> at children’s camps including <strong>Suzirya Tauriia (Ukraine)</strong>, <strong>Talentland (New York)</strong>, and <strong>Jugendhaus (Germany)</strong>, where she developed creative programs that build imagination, confidence, and teamwork through performance.</p>
+
+        <p>Fluent in <strong>English, Russian, and Ukrainian</strong>, and <strong>proficient in German</strong>, Stalina brings a global perspective and a passion for storytelling to her teaching. Through <strong>Bright Star Acting Studio</strong>, she helps every child discover their inner spark, find confidence on stage, and shine in their own unique way.</p>
+
+        <div class="cta">
+          <a class="btn" href="https://www.backstage.com/tal/stalinada-huberchenko/" target="_blank" rel="noopener">View Acting Portfolio</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Bright Star Acting Studio · Brooklyn, NY
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
