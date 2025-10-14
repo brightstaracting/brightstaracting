@@ -4,26 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Bright Star Acting Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<header>
-  <h1>📞 Contact Us</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="classes.html">Classes</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-<section class="card">
-  <p>📍 3063 Brighton 8th Street, Brooklyn, NY 11235</p>
-  <p>📅 Monday & Wednesday, 5 PM</p>
-  <p>☎️ <a href="tel:3474617236">347 461 7236</a></p>
-  <p>✉️ <a href="mailto:brightstaractingstudio@gmail.com">brightstaractingstudio@gmail.com</a></p>
-  <p>📸 <a href="https://instagram.com/brightstaracting" target="_blank">@brightstaracting</a></p>
-</section>
+<body>
+  <header>
+    <h1>📬 Contact Bright Star Acting Studio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="classes.html">Classes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main style="max-width:800px; margin:0 auto; padding:50px 20px; text-align:center; line-height:1.7;">
+    <h2 style="color:#ff7b00; margin-bottom:10px;">We’d Love to Hear from You!</h2>
+    <p style="max-width:700px; margin:0 auto 30px; color:#555;">
+      Whether you’d like to book your child’s first class, ask a question, or collaborate — 
+      we’d love to connect with you! Fill out the form below, and we’ll get back to you as soon as possible.
+    </p>
+
+    <form action="https://formspree.io/f/xrbyyopy" method="POST" style="display:grid; gap:15px; text-align:left; max-width:600px; margin:0 auto;">
+      <label>Parent’s Name:
+        <input type="text" name="Parent Name" required style="width:100%; padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px;">
+      </label>
+      <label>Child’s Name & Age:
+        <input type="text" name="Child Name and Age" required style="width:100%; padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px;">
+      </label>
+      <label>Email:
+        <input type="email" name="Email" required style="width:100%; padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px;">
+      </label>
+      <label>Phone:
+        <input type="text" name="Phone" style="width:100%; padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px;">
+      </label>
+      <label>Message:
+        <textarea name="Message" style="width:100%; padding:12px 15px; border:1px solid #ffd6a0; border-radius:10px; min-height:100px;"></textarea>
+      </label>
+      <button type="submit" style="background:linear-gradient(90deg,#ff7b00,#ffb84d); color:white; border:none; border-radius:999px; padding:14px 24px; font-weight:600; cursor:pointer; font-size:1rem; transition:transform 0.2s;">
+        Send Message
+      </button>
+    </form>
+
+    <div style="margin-top:40px; color:#333;">
+      <p><strong>📍 Bright Star Acting Studio</strong><br>
+      3063 Brighton 8th St, Brooklyn, NY 11235</p>
+      <p>📧 <strong>Email:</strong> brightstaractingstudio@gmail.com</p>
+    </div>
+
+    <iframe
+      src="https://www.google.com/maps?q=3063+Brighton+8th+St,+Brooklyn,+NY+11235&output=embed"
+      width="100%" height="300" style="border:0; border-radius:10px; margin-top:20px;" allowfullscreen>
+    </iframe>
+  </main>
+
+  <footer style="text-align:center; color:#777; padding:40px 12px;">
+    © 2025 Bright Star Acting Studio · Brooklyn, NY
+  </footer>
 </body>
 </html>
