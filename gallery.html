@@ -4,36 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery — Bright Star Acting Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .gallery-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .gallery-section h2 {
+      color: #ff7b00;
+      margin-bottom: 10px;
+    }
+
+    .gallery-section p {
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <h1>📸 Our Classes in Action</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="classes.html">Classes</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>📸 Our Classes in Action</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="classes.html">Classes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section class="card">
-  <h3>Our Students in Action 🎭</h3>
-  <p>Take a look at our amazing young actors during class and performances!</p>
+  <section class="gallery-section">
+    <h2>Our Students in Action 🎭</h2>
+    <p>Take a look at our amazing young actors during classes and performances!  
+       Every smile tells a story — full of creativity, teamwork, and fun at Bright Star Acting Studio.</p>
 
-  <div class="gallery">
-    <img src="gallery/IMG.1.PNG" alt="Acting class 1" />
-    <img src="gallery/IMG.2.PNG" alt="Acting class 2" />
-    <img src="gallery/IMG.6.PNG" alt="Acting class 3" />
-    <img src="gallery/IMG.7.jpg" alt="Acting class 4" />
-    <img src="gallery/IMG.10.jpg" alt="Acting class 5" />
-    <img src="gallery/IMG.11.jpg" alt="Acting class 6" />
-  </div>
-</section>
+    <div class="gallery">
+      <a href="#img1"><img src="gallery/IMG.1.PNG" alt="Acting class 1"></a>
+      <a href="#img2"><img src="gallery/IMG.2.PNG" alt="Acting class 2"></a>
+      <a href="#img3"><img src="gallery/IMG.6.PNG" alt="Acting class 3"></a>
+      <a href="#img4"><img src="gallery/IMG.7.jpg" alt="Acting class 4"></a>
+      <a href="#img5"><img src="gallery/IMG.10.jpg" alt="Acting class 5"></a>
+      <a href="#img6"><img src="gallery/IMG.11.jpg" alt="Acting class 6"></a>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2025 Bright Star Acting Studio</p>
-</footer>
-</body>
-</html>
+  <!-- Lightbox images -->
+  <div class="lightbox" id="img1"><a href="#"><img src="gallery/IMG.1.PNG" alt=""></a></div>
+  <div class="lightbox" id="img2"><a href="#"><img src="gallery/IMG.2.PNG" alt=""></a></div>
+  <div class="lightbox" id="img3"><a href="#"><img src="gallery/IMG.6.PNG" alt=""></a></div>
+  <div class="lightbox" id="img4"><a href="#"><img src="gallery/IMG.7.jpg" alt=""></a></div>
+  <div class="lightbox" id="img5"><a href="#"><img src="gallery/IMG.10.jpg" alt=""></a></div>
+  <div class="lightbox" id="img6"><a href="#"><img src="gallery/IMG.11.jpg" alt=""></a></div>
+
+  <footer>
+    <p>© 2025 Bright Star Acting Studio</p>
+  </foo
