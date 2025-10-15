@@ -7,19 +7,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
+
+  <style>
+    /* ===== HERO SECTION STYLE ===== */
+    .hero {
+      background: 
+        linear-gradient(rgba(255, 123, 0, 0.55), rgba(255, 184, 77, 0.55)),
+        url("gallery/star.1.png") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #ff7b00, #ffb84d);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(90deg, #ff922e, #ffc366);
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>🌟 Bright Star Acting Studio 🎭</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" style="text-decoration: underline;">Home</a>
       <a href="classes.html">Classes</a>
       <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
+      <a href="about.html">Our Teacher</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <h2>Welcome to Bright Star Acting Studio! 🎭✨</h2>
     <p>At Bright Star, kids gain confidence, creativity, and stage skills — while having fun!</p>
@@ -29,12 +71,8 @@
   <!-- ===== BOOK YOUR FIRST CLASS SECTION ===== -->
   <section id="book-class" style="background:#fff9f2; padding:60px 20px; text-align:center;">
     <div style="max-width:700px; margin:0 auto;">
-      <h2 style="font-size:2rem; color:#ff7b00; margin-bottom:10px;">
-        Book Your First Free Class
-      </h2>
-      <p style="color:#555; margin-bottom:30px;">
-        Fill out the form below and we’ll reach out to schedule your child’s first trial class!
-      </p>
+      <h2 style="font-size:2rem; color:#ff7b00; margin-bottom:10px;">Book Your First Free Class</h2>
+      <p style="color:#555; margin-bottom:30px;">Fill out the form below and we’ll reach out to schedule your child’s first trial class!</p>
 
       <form id="contact-form" style="display:grid; gap:15px; text-align:left;">
         <input type="text" name="parent-name" placeholder="Parent’s Name" required
