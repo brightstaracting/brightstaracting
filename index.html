@@ -9,16 +9,16 @@
   <script src="script.js" defer></script>
 
   <style>
-    /* ===== HERO SECTION STYLE ===== */
     .hero {
-      background: 
-        linear-gradient(rgba(255, 123, 0, 0.55), rgba(255, 184, 77, 0.55)),
-        url("gallery/star.6.jpg") center/cover no-repeat;
+      background:
+        linear-gradient(rgba(255, 123, 0, 0.35), rgba(255, 184, 77, 0.35)),
+        url("gallery/star.6.jpg") center center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 110px 20px;
+      padding: 120px 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      min-height: 65vh;
     }
 
     .hero h2 {
@@ -61,14 +61,12 @@
     </nav>
   </header>
 
-  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <h2>Welcome to Bright Star Acting Studio! 🎭✨</h2>
     <p>At Bright Star, kids gain confidence, creativity, and stage skills — while having fun!</p>
     <a class="btn" href="classes.html">View Packages & Pricing</a>
   </section>
 
-  <!-- ===== BOOK YOUR FIRST CLASS SECTION ===== -->
   <section id="book-class" style="background:#fff9f2; padding:60px 20px; text-align:center;">
     <div style="max-width:700px; margin:0 auto;">
       <h2 style="font-size:2rem; color:#ff7b00; margin-bottom:10px;">Book Your First Free Class</h2>
@@ -100,7 +98,6 @@
   </section>
 
   <script>
-    // simple thank-you message after submission
     const form = document.getElementById('contact-form');
     const thankyou = document.getElementById('thankyou-message');
     form.addEventListener('submit', (e) => {
@@ -115,3 +112,4 @@
   </footer>
 </body>
 </html>
+
