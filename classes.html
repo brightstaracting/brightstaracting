@@ -6,6 +6,21 @@
   <title>Classes — Bright Star Acting Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Responsive fix for heading wrap on mobile */
+    @media (max-width: 600px) {
+      .class-heading {
+        display: inline-block;
+        text-align: center;
+        line-height: 1.4;
+      }
+      .class-heading span {
+        display: block;
+        margin-top: 4px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,7 +35,10 @@
   </header>
 
   <main class="container" style="max-width:900px; margin:0 auto; padding:50px 20px; line-height:1.7;">
-    <h2 style="text-align:center; color:#ff7b00; margin-bottom:10px;">Acting Classes for Kids Ages 7–13</h2>
+    <h2 class="class-heading" style="text-align:center; color:#ff7b00; margin-bottom:10px;">
+      Acting Classes for Kids <span>Ages&nbsp;7–13</span>
+    </h2>
+
     <p style="text-align:center; color:#555; max-width:700px; margin:0 auto 40px;">
       Fun, creative, and confidence-building acting classes where kids learn to express themselves on stage and on camera — guided by professional actress and teacher <strong>Stalina Guberchenko</strong>.
     </p>
