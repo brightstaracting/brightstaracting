@@ -88,7 +88,7 @@
         grid-template-columns: 420px 1fr;
       }
       .mobile-intro {
-        display: none; /* hide the mobile intro on large screens */
+        display: none; /* hide mobile intro on desktop */
       }
     }
 
@@ -152,14 +152,15 @@
       padding: 40px 12px;
     }
 
-    /* ===== MOBILE INTRO SECTION ===== */
+    /* ===== MOBILE INTRO ===== */
     @media (max-width: 859px) {
       .mobile-intro {
         text-align: center;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
       }
       .mobile-intro h2 {
         color: var(--brand);
+        font-size: 22px;
         margin-bottom: 6px;
       }
       .mobile-intro p {
@@ -183,7 +184,7 @@
 
   <main class="container">
 
-    <!-- Shown only on mobile -->
+    <!-- Intro visible only on mobile -->
     <div class="mobile-intro">
       <h2>Stalina — Founder & Artistic Director</h2>
       <p>Professional actress and theater educator based in Brooklyn, New York.</p>
@@ -195,9 +196,6 @@
       </aside>
 
       <article class="card main">
-        <h2>Stalina — Founder & Artistic Director</h2>
-        <p class="subtitle">Professional actress and theater educator based in Brooklyn, New York.</p>
-
         <p>Originally from Ukraine, <strong>Stalina Guberchenko</strong> is a professional actress, theater educator, and the founder of <strong>Bright Star Acting Studio</strong> in Brooklyn, New York. She is a <strong>graduate of New York University Abu Dhabi and NYU Tisch School of the Arts</strong>, where she transferred after two years to continue her professional training at the <strong>Lee Strasberg Theatre &amp; Film Institute</strong>. Her studies focused on <em>Method Acting, Acting for Film &amp; TV, Character Development, Movement, Voice and Speech,</em> and <em>Stage Combat</em>, guided by renowned theater professionals.</p>
 
         <p>Her stage experience includes <em>Fair Winds and Winds of War</em> at <strong>Theater for the New City</strong>, <em>The Caucasian Chalk Circle</em> at the <strong>NYUAD Arts Center</strong>, <em>The Duchess of LES</em> at the <strong>Kraine Theatre</strong>, <em>Your Faithful Reader</em> at <strong>Teatro LATEA</strong>, and <em>Kholstomer</em>, <em>Omar Khayyam</em>, and <em>Equus</em> at <strong>Essence Theater</strong>. She also performed in multiple theater installations at the <strong>Abu Dhabi Art Festival</strong> and <strong>Expo Dubai</strong>, bringing immersive storytelling to international audiences.</p>
@@ -224,4 +222,5 @@
   </script>
 </body>
 </html>
+
 
