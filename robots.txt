@@ -1,0 +1,6 @@
+# Bright Star Acting Studio — Robots Instructions
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines
+Sitemap: https://brightstaracting.github.io/brightstaracting/sitemap.xml
