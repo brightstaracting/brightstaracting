@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ===== META BASICS ===== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery — Bright Star Acting Studio</title>
+
+  <title>Gallery — Bright Star Acting Studio Brooklyn, NY</title>
+
+  <!-- ===== SEO DESCRIPTION & KEYWORDS ===== -->
+  <meta name="description" content="See photos from Bright Star Acting Studio in Brooklyn! Our young actors shine on stage and in class, building confidence and creativity through performance.">
+  <meta name="keywords" content="Bright Star Acting Studio gallery, kids acting photos, children's theatre Brooklyn, acting classes for kids NYC, Brighton Beach studio gallery">
+
+  <!-- ===== CANONICAL LINK ===== -->
+  <link rel="canonical" href="https://brightstaracting.github.io/brightstaracting/gallery.html" />
+
+  <!-- ===== OPEN GRAPH (FACEBOOK / INSTAGRAM PREVIEW) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brightstaracting.github.io/brightstaracting/gallery.html" />
+  <meta property="og:title" content="Gallery — Bright Star Acting Studio Brooklyn, NY" />
+  <meta property="og:description" content="Discover moments from our acting classes for kids in Brooklyn! Creativity, teamwork, and fun at Bright Star Acting Studio." />
+  <meta property="og:image" content="https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery — Bright Star Acting Studio Brooklyn, NY" />
+  <meta name="twitter:description" content="Photos from acting classes for kids ages 7–13 at Bright Star Acting Studio in Brooklyn." />
+  <meta name="twitter:image" content="https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg" />
+
+  <!-- ===== STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Bright Star Acting Studio Gallery",
+    "url": "https://brightstaracting.github.io/brightstaracting/gallery.html",
+    "description": "A gallery of student performances and acting classes at Bright Star Acting Studio, Brooklyn, NY.",
+    "image": [
+      "https://brightstaracting.github.io/brightstaracting/gallery/IMG.1.PNG",
+      "https://brightstaracting.github.io/brightstaracting/gallery/IMG.2.PNG",
+      "https://brightstaracting.github.io/brightstaracting/gallery/IMG.6.PNG",
+      "https://brightstaracting.github.io/brightstaracting/gallery/IMG.7.jpg",
+      "https://brightstaracting.github.io/brightstaracting/gallery/IMG.10.jpg",
+      "https://brightstaracting.github.io/brightstaracting/gallery/IMG.11.jpg"
+    ],
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "Bright Star Acting Studio",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3063 Brighton 8th St",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "postalCode": "11235",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-347-461-7236"
+    }
+  }
+  </script>
+
+  <!-- ===== STYLES ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ===== INLINE GALLERY STYLES ===== -->
   <style>
     .gallery-section {
       max-width: 1000px;
@@ -46,7 +104,6 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
-    /* Lightbox styling */
     .lightbox {
       display: none;
       position: fixed;
@@ -73,7 +130,6 @@
       display: flex;
     }
 
-    /* Close button */
     .close {
       position: absolute;
       top: 20px;
@@ -92,17 +148,19 @@
 </head>
 
 <body>
+  <!-- ===== HEADER ===== -->
   <header>
     <h1>📸 Our Classes in Action</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="classes.html">Classes</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="gallery.html" style="text-decoration: underline;">Gallery</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+  <!-- ===== GALLERY SECTION ===== -->
   <section class="gallery-section">
     <h2>Our Students in Action 🎭</h2>
     <p>Take a look at our amazing young actors during classes and performances!  
@@ -118,39 +176,18 @@
     </div>
   </section>
 
-  <!-- Lightbox full images with close button -->
-  <div class="lightbox" id="img1">
-    <a href="#" class="close">×</a>
-    <img src="gallery/IMG.1.PNG" alt="">
-  </div>
+  <!-- ===== LIGHTBOXES ===== -->
+  <div class="lightbox" id="img1"><a href="#" class="close">×</a><img src="gallery/IMG.1.PNG" alt=""></div>
+  <div class="lightbox" id="img2"><a href="#" class="close">×</a><img src="gallery/IMG.2.PNG" alt=""></div>
+  <div class="lightbox" id="img3"><a href="#" class="close">×</a><img src="gallery/IMG.6.PNG" alt=""></div>
+  <div class="lightbox" id="img4"><a href="#" class="close">×</a><img src="gallery/IMG.7.jpg" alt=""></div>
+  <div class="lightbox" id="img5"><a href="#" class="close">×</a><img src="gallery/IMG.10.jpg" alt=""></div>
+  <div class="lightbox" id="img6"><a href="#" class="close">×</a><img src="gallery/IMG.11.jpg" alt=""></div>
 
-  <div class="lightbox" id="img2">
-    <a href="#" class="close">×</a>
-    <img src="gallery/IMG.2.PNG" alt="">
-  </div>
-
-  <div class="lightbox" id="img3">
-    <a href="#" class="close">×</a>
-    <img src="gallery/IMG.6.PNG" alt="">
-  </div>
-
-  <div class="lightbox" id="img4">
-    <a href="#" class="close">×</a>
-    <img src="gallery/IMG.7.jpg" alt="">
-  </div>
-
-  <div class="lightbox" id="img5">
-    <a href="#" class="close">×</a>
-    <img src="gallery/IMG.10.jpg" alt="">
-  </div>
-
-  <div class="lightbox" id="img6">
-    <a href="#" class="close">×</a>
-    <img src="gallery/IMG.11.jpg" alt="">
-  </div>
-
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2025 Bright Star Acting Studio</p>
+    <p>© 2025 Bright Star Acting Studio · Brooklyn, NY</p>
   </footer>
 </body>
 </html>
+
