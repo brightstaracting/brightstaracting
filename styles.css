@@ -50,8 +50,9 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background-image: linear-gradient(rgba(255, 145, 77, 0.6), rgba(255, 145, 77, 0.6)), 
-  url('kids-class.jpg');
+  background-image: 
+    linear-gradient(rgba(255, 145, 77, 0.6), rgba(255, 145, 77, 0.6)),
+    url("/brightstaracting/gallery/star.6.jpg?v=2");
   background-size: cover;
   background-position: center;
   color: white;
