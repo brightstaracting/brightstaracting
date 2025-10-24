@@ -57,7 +57,7 @@
   <!-- ===== BASE PATH ===== -->
   <base href="/brightstaracting/">
 
-  <!-- ===== STYLES ===== -->
+  <!-- ===== STYLE (keeps your original look) ===== -->
   <style>
     :root {
       --bg: #fff9f2;
@@ -73,7 +73,7 @@
 
     body {
       margin: 0;
-      font-family: "Poppins", "Comic Sans MS", sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
       color: var(--text);
       line-height: 1.6;
@@ -90,7 +90,7 @@
 
     header h1 {
       font-size: 2rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
     }
 
     nav {
@@ -98,24 +98,24 @@
     }
 
     nav a {
-      font-family: "Poppins", "Comic Sans MS", sans-serif;
-      font-weight: bold;
       color: #fff;
       text-decoration: none;
-      margin: 0 10px;
-      transition: 0.3s;
-      letter-spacing: 0.3px;
+      margin: 0 12px;
+      font-weight: 500;
+      font-family: 'Poppins', Arial, sans-serif;
+      transition: opacity 0.2s ease;
     }
 
     nav a:hover {
+      opacity: 0.8;
       text-decoration: underline;
-      color: #fff8e7;
     }
 
     nav a[style*="underline"] {
       text-decoration: underline;
     }
 
+    /* ===== MAIN LAYOUT ===== */
     .container {
       max-width: 1080px;
       margin: 0 auto;
@@ -131,8 +131,12 @@
     }
 
     @media (min-width: 860px) {
-      .about { grid-template-columns: 420px 1fr; }
-      .mobile-intro { display: none; }
+      .about {
+        grid-template-columns: 420px 1fr;
+      }
+      .mobile-intro {
+        display: none;
+      }
     }
 
     .card {
@@ -150,20 +154,34 @@
       border-radius: var(--radius) var(--radius) 0 0;
     }
 
-    .main { padding: 22px; }
+    .main {
+      padding: 22px;
+    }
+
     .main h2 {
       margin: 0 0 10px;
       font-size: clamp(22px, 2.6vw, 30px);
       color: var(--brand);
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 600;
     }
+
     .subtitle {
       margin: 0 0 18px;
       color: var(--muted);
       font-weight: 500;
     }
-    .main p { margin: 12px 0; }
 
-    .cta { margin-top: 20px; }
+    .main p {
+      margin: 12px 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .cta {
+      margin-top: 20px;
+    }
+
     .btn {
       display: inline-block;
       background: linear-gradient(90deg, var(--brand), var(--brand-2));
@@ -172,9 +190,13 @@
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
+      font-family: 'Poppins', Arial, sans-serif;
       transition: transform 0.1s ease;
     }
-    .btn:hover { transform: translateY(-2px); }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
     footer {
       text-align: center;
@@ -197,7 +219,9 @@
         color: var(--muted);
         margin: 0;
       }
-      .main h2, .main .subtitle { display: none; }
+      .main h2, .main .subtitle {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -230,15 +254,15 @@
         <h2>Stalina — Founder & Artistic Director</h2>
         <p class="subtitle">Professional actress and theater educator based in Brooklyn, New York.</p>
 
-        <p>Originally from Ukraine, <strong>Stalina Guberchenko</strong> is a professional actress, theater educator, and the founder of <strong>Bright Star Acting Studio</strong> in Brooklyn, New York. She is a <strong>graduate of New York University Abu Dhabi and NYU Tisch School of the Arts</strong>, where she continued her professional training at the <strong>Lee Strasberg Theatre & Film Institute</strong> focused on <em>Method Acting, Acting for Film & TV, Character Development, Movement, Voice and Speech,</em> and <em>Stage Combat</em>.</p>
+        <p>Originally from Ukraine, <strong>Stalina Guberchenko</strong> is a professional actress, theater educator, and the founder of <strong>Bright Star Acting Studio</strong> in Brooklyn, New York. She is a <strong>graduate of New York University Abu Dhabi and NYU Tisch School of the Arts</strong>, where she transferred after two years to continue her professional training at the <strong>Lee Strasberg Theatre &amp; Film Institute</strong>. Her studies focused on <em>Method Acting, Acting for Film &amp; TV, Character Development, Movement, Voice and Speech,</em> and <em>Stage Combat</em>, guided by renowned theater professionals.</p>
 
-        <p>Her stage experience includes <em>Fair Winds and Winds of War</em> at <strong>Theater for the New City</strong>, <em>The Caucasian Chalk Circle</em> at the <strong>NYUAD Arts Center</strong>, <em>The Duchess of LES</em> at the <strong>Kraine Theatre</strong>, <em>Your Faithful Reader</em> at <strong>Teatro LATEA</strong>, and <em>Kholstomer</em>, <em>Omar Khayyam</em>, and <em>Equus</em> at <strong>Essence Theater</strong>. She also performed in multiple theater installations at the <strong>Abu Dhabi Art Festival</strong> and <strong>Expo Dubai</strong>.</p>
+        <p>Her stage experience includes <em>Fair Winds and Winds of War</em> at <strong>Theater for the New City</strong>, <em>The Caucasian Chalk Circle</em> at the <strong>NYUAD Arts Center</strong>, <em>The Duchess of LES</em> at the <strong>Kraine Theatre</strong>, <em>Your Faithful Reader</em> at <strong>Teatro LATEA</strong>, and <em>Kholstomer</em>, <em>Omar Khayyam</em>, and <em>Equus</em> at <strong>Essence Theater</strong>. She also performed in multiple theater installations at the <strong>Abu Dhabi Art Festival</strong> and <strong>Expo Dubai</strong>, bringing immersive storytelling to international audiences.</p>
 
-        <p>On screen, Stalina has played lead roles in short films such as <strong><em>Just a Little Longer</em></strong>, <strong><em>Mom Said Always Be Nice</em></strong>, and <strong><em>Snarly Yow</em></strong>. She appeared in Ukrainian TV series <strong><em>Vskritie Pokazhet</em></strong> and <strong><em>Slipa</em></strong>, and continues to act in commercials, brand projects, and music videos.</p>
+        <p>On screen, Stalina has played lead roles in short films such as <strong><em>Just a Little Longer</em></strong> (shot in Baltimore), <strong><em>Mom Said Always Be Nice</em></strong> (shot in New York), and <strong><em>Snarly Yow</em></strong> (shot in West Virginia). She also appeared in the Ukrainian television series <strong><em>Vskritie Pokazhet</em></strong> and <strong><em>Slipa</em></strong>, and continues to act in commercials, brand projects, and music videos for various companies and artists.</p>
 
-        <p>Beyond acting, Stalina has extensive experience teaching and inspiring children worldwide. She has worked as an <strong>acting instructor</strong>, <strong>creative director</strong>, and <strong>theater educator</strong> at children’s camps including <strong>Suzirya Tauriia (Ukraine)</strong>, <strong>Talentland (New York)</strong>, and <strong>Jugendhaus (Germany)</strong>, developing creative programs that build imagination and confidence through performance.</p>
+        <p>Beyond acting, Stalina has extensive experience teaching and inspiring children around the world. She has worked as an <strong>acting instructor</strong>, <strong>creative director</strong>, and <strong>theater educator</strong> at children’s camps including <strong>Suzirya Tauriia (Ukraine)</strong>, <strong>Talentland (New York)</strong>, and <strong>Jugendhaus (Germany)</strong>, where she developed creative programs that build imagination, confidence, and teamwork through performance.</p>
 
-        <p>Fluent in <strong>English, Russian, and Ukrainian</strong>, and proficient in <strong>German</strong>, Stalina brings a global perspective and passion for storytelling to her teaching. Through <strong>Bright Star Acting Studio</strong>, she helps every child discover their inner spark and shine in their own unique way.</p>
+        <p>Fluent in <strong>English, Russian, and Ukrainian</strong>, and <strong>proficient in German</strong>, Stalina brings a global perspective and a passion for storytelling to her teaching. Through <strong>Bright Star Acting Studio</strong>, she helps every child discover their inner spark, find confidence on stage, and shine in their own unique way.</p>
 
         <div class="cta">
           <a class="btn" href="https://www.backstage.com/tal/stalinada-huberchenko/" target="_blank" rel="noopener">View Acting Portfolio</a>
@@ -252,7 +276,7 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
