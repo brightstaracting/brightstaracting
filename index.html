@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ===== META BASICS ===== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bright Star Acting Studio</title>
+
+  <title>Bright Star Acting Studio — Kids Acting Classes in Brooklyn, NY</title>
+
+  <!-- ===== SEO DESCRIPTION & KEYWORDS ===== -->
+  <meta name="description" content="Bright Star Acting Studio in Brooklyn, NY offers fun and confidence-building acting classes for kids aged 7–13. Free trial class available!">
+  <meta name="keywords" content="acting classes for kids, Brighton Beach acting studio, children's theatre Brooklyn, acting for kids NYC, kids performing arts Brooklyn">
+
+  <!-- ===== CANONICAL LINK ===== -->
+  <link rel="canonical" href="https://brightstaracting.github.io/brightstaracting/" />
+
+  <!-- ===== OPEN GRAPH (FACEBOOK, INSTAGRAM, ETC.) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brightstaracting.github.io/brightstaracting/">
+  <meta property="og:title" content="Bright Star Acting Studio — Kids Acting Classes in Brooklyn, NY">
+  <meta property="og:description" content="Join our fun acting classes for kids (7–13) in Brooklyn! Free trial class available.">
+  <meta property="og:image" content="https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bright Star Acting Studio — Kids Acting Classes in Brooklyn, NY">
+  <meta name="twitter:description" content="Confidence, creativity, and fun on stage! Free trial class for kids ages 7–13.">
+  <meta name="twitter:image" content="https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg">
+
+  <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bright Star Acting Studio",
+    "image": "https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3063 Brighton 8th St",
+      "addressLocality": "Brooklyn",
+      "addressRegion": "NY",
+      "postalCode": "11235",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-347-461-7236",
+    "url": "https://brightstaracting.github.io/brightstaracting/",
+    "description": "Acting and theatre classes for kids aged 7–13 in Brooklyn, NY.",
+    "openingHours": "Mo,We 17:00-18:00",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- ===== FONTS, STYLES, AND SCRIPTS ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
-
-  <style>
-    .hero {
-      background:
-        linear-gradient(rgba(255, 123, 0, 0.35), rgba(255, 184, 77, 0.35)),
-        url("gallery/star.6.jpg") center center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-      min-height: 65vh;
-    }
-
-    .hero h2 {
-      font-size: 2.4rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 25px;
-    }
-
-    .btn {
-      background: linear-gradient(90deg, #ff7b00, #ffb84d);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s ease, background 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      background: linear-gradient(90deg, #ff922e, #ffc366);
-    }
-  </style>
+  <link rel="icon" type="image/png" href="gallery/star.6.jpg" />
 </head>
 
 <body>
+  <!-- ===== HEADER ===== -->
   <header>
     <h1>🌟 Bright Star Acting Studio 🎭</h1>
     <nav>
@@ -61,12 +70,14 @@
     </nav>
   </header>
 
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <h2>Welcome to Bright Star Acting Studio! 🎭✨</h2>
     <p>At Bright Star, kids gain confidence, creativity, and stage skills — while having fun!</p>
     <a class="btn" href="classes.html">View Packages & Pricing</a>
   </section>
 
+  <!-- ===== BOOK CLASS FORM ===== -->
   <section id="book-class" style="background:#fff9f2; padding:60px 20px; text-align:center;">
     <div style="max-width:700px; margin:0 auto;">
       <h2 style="font-size:2rem; color:#ff7b00; margin-bottom:10px;">Book Your First Free Class</h2>
@@ -97,6 +108,7 @@
     </div>
   </section>
 
+  <!-- ===== SCRIPT: FORM HANDLER ===== -->
   <script>
     const form = document.getElementById('contact-form');
     const thankyou = document.getElementById('thankyou-message');
@@ -107,9 +119,11 @@
     });
   </script>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>© 2025 Bright Star Acting Studio — 3063 Brighton 8th St, Brooklyn, NY 11235</p>
   </footer>
 </body>
 </html>
+
 
