@@ -1,89 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ===== META BASICS ===== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Acting Classes & Pricing — Bright Star Acting Studio Brooklyn, NY</title>
-
-  <!-- ===== SEO DESCRIPTION & KEYWORDS ===== -->
   <meta name="description" content="Explore acting classes for kids ages 7–13 at Bright Star Acting Studio in Brooklyn. Small groups, fun atmosphere, and professional teaching. First trial class is free!">
-  <meta name="keywords" content="acting classes for kids Brooklyn, children's theatre Brooklyn, Brighton Beach acting studio, kids acting lessons, performing arts Brooklyn, Bright Star Acting Studio">
-
-  <!-- ===== CANONICAL LINK ===== -->
   <link rel="canonical" href="https://brightstaracting.github.io/brightstaracting/classes.html" />
-
-  <!-- ===== OPEN GRAPH (FACEBOOK/INSTAGRAM SHARE) ===== -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://brightstaracting.github.io/brightstaracting/classes.html" />
-  <meta property="og:title" content="Acting Classes & Pricing — Bright Star Acting Studio Brooklyn, NY" />
-  <meta property="og:description" content="Fun, confidence-building acting classes for kids ages 7–13 in Brooklyn. Free trial class and flexible packages available." />
-  <meta property="og:image" content="https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg" />
-
-  <!-- ===== TWITTER CARD ===== -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Acting Classes & Pricing — Bright Star Acting Studio Brooklyn, NY" />
-  <meta name="twitter:description" content="Learn about class schedules, packages, and pricing at Bright Star Acting Studio in Brooklyn. First trial class free!" />
-  <meta name="twitter:image" content="https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg" />
-
-  <!-- ===== STRUCTURED DATA ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Kids Acting Classes (Ages 7–13)",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Bright Star Acting Studio",
-      "image": "https://brightstaracting.github.io/brightstaracting/gallery/star.6.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "3063 Brighton 8th St",
-        "addressLocality": "Brooklyn",
-        "addressRegion": "NY",
-        "postalCode": "11235",
-        "addressCountry": "US"
-      },
-      "telephone": "+1-347-461-7236",
-      "url": "https://brightstaracting.github.io/brightstaracting/"
-    },
-    "description": "Acting, improvisation, stage speech, and movement classes for kids aged 7–13 in Brooklyn, NY. Free trial class available.",
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": "In person",
-      "location": {
-        "@type": "Place",
-        "name": "Bright Star Acting Studio",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "3063 Brighton 8th St",
-          "addressLocality": "Brooklyn",
-          "addressRegion": "NY",
-          "postalCode": "11235",
-          "addressCountry": "US"
-        }
-      },
-      "startDate": "2025-01-01",
-      "endDate": "2025-12-31",
-      "offers": [
-        {"@type": "Offer","price": "0","priceCurrency": "USD","name": "Trial Class"},
-        {"@type": "Offer","price": "35","priceCurrency": "USD","name": "Single Class"},
-        {"@type": "Offer","price": "130","priceCurrency": "USD","name": "4 Classes Package"},
-        {"@type": "Offer","price": "230","priceCurrency": "USD","name": "8 Classes Package"},
-        {"@type": "Offer","price": "150","priceCurrency": "USD","name": "First 8 Classes Package (Discount)"}
-      ]
-    }
-  }
-  </script>
-
-  <!-- ===== STYLES ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- ===== PAGE-SPECIFIC BUTTON STYLE ===== -->
   <style>
-    /* Keep home-style gradient buttons */
     .btn {
       background: linear-gradient(90deg, #ff7b00, #ffb84d);
       color: white;
@@ -94,24 +20,55 @@
       display: inline-block;
       transition: transform 0.2s ease, background 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
     }
-    .btn:hover {
-      transform: translateY(-3px);
-      background: linear-gradient(90deg, #ff922e, #ffc366);
-    }
+    .btn:hover { transform: translateY(-3px); background: linear-gradient(90deg, #ff922e, #ffc366); }
 
-    @media (max-width: 600px) {
-      .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
+    @media (max-width: 600px) { .btn { display: block; width: 100%; text-align: center; } }
+
+    /* Popup styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
     }
+    .modal-content {
+      background: #fff9f2;
+      padding: 25px 30px;
+      border-radius: 16px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      font-family: "Poppins", sans-serif;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .close-btn {
+      background: #ff7b00;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .close-btn:hover { background: #ff922e; }
   </style>
 </head>
 
 <body>
-  <!-- ===== HEADER ===== -->
   <header>
     <h1>🎭 Bright Star Acting Studio</h1>
     <nav>
@@ -123,106 +80,73 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
   <main class="container" style="max-width:900px; margin:0 auto; padding:50px 20px; line-height:1.7;">
-    <h2 class="class-heading" style="text-align:center; color:#ff7b00; margin-bottom:10px;">
-      Acting Classes for Kids <span>Ages&nbsp;7–13</span>
-    </h2>
-
+    <h2 style="text-align:center; color:#ff7b00;">Acting Classes for Kids <span>Ages 7–13</span></h2>
     <p style="text-align:center; color:#555; max-width:700px; margin:0 auto 40px;">
-      Fun, creative, and confidence-building acting classes where kids learn to express themselves on stage and on camera — guided by professional actress and teacher <strong>Stalina Guberchenko</strong>.
+      Fun, creative, and confidence-building acting classes guided by professional actress and teacher <strong>Stalina Guberchenko</strong>.
     </p>
 
-    <!-- What We Teach -->
-    <section style="margin-bottom:45px;">
-      <h3 style="color:#ff7b00;">🎭 What We Teach</h3>
-      <ul style="margin-top:15px; margin-left:20px; color:#333;">
-        <li><strong>Stage Speech</strong> — speaking clearly, confidently, and expressively.</li>
-        <li><strong>Stage Movement</strong> — body awareness, posture, and coordination.</li>
-        <li><strong>Acting Games</strong> — developing imagination and teamwork.</li>
-        <li><strong>Improvisation & Character Work</strong> — building creativity and confidence.</li>
-        <li><strong>Acting for Camera</strong> — understanding presence and performance on screen.</li>
-      </ul>
-    </section>
-
-    <!-- Schedule -->
-    <section style="margin-bottom:45px;">
-      <h3 style="color:#ff7b00;">🕓 Schedule</h3>
-      <p style="margin-top:10px;">
-        <strong>Days:</strong> Monday & Wednesday<br>
-        <strong>Time:</strong> 5:00 PM – 6:00 PM<br>
-        <strong>Location:</strong> 3063 Brighton 8th St, Brooklyn, NY 11235
-      </p>
-      <p style="margin-top:10px; color:#555;">
-        Small group format — up to 10 kids per class.
-      </p>
-    </section>
-
-    <!-- Pricing -->
     <section style="margin-bottom:45px;">
       <h3 style="color:#ff7b00;">💰 Pricing</h3>
-      <p style="margin-top:10px;">
-        <strong>First Trial Class:</strong> Free!<br>
-        <em style="color:#777;">For new students trying Bright Star for the first time.</em><br><br>
-
-        <strong>Single Class:</strong> $35<br>
-        <em style="color:#777;">For returning students attending a single class without a package.</em><br><br>
-
-        <strong>4 Classes Package:</strong> $130<br>
-        <em style="color:#777;">Valid for 5 weeks from the first class attended.</em><br><br>
-
-        <strong>8 Classes Package (Regular):</strong> $230<br>
-        <em style="color:#777;">Valid for 8 weeks from the first class attended.</em><br><br>
-      </p>
-
-      <div style="background:#fff4e5; border-radius:16px; padding:15px 20px; margin:25px 0;">
-        <p style="margin:0;">
-          <strong style="color:#ff7b00;">First 8 Classes Package (First Month Discount):</strong> $150<br>
-          <em style="color:#777;">New students receive a 35% discount on their first 8 classes!</em>
-        </p>
-      </div>
-
       <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:10px;">
-        <a href="https://buy.stripe.com/6oU28qaEecFV7NigxO3ZK0a" target="_blank" class="btn">Single Class — $35</a>
-        <a href="https://buy.stripe.com/14A00i8w65dt1oUftK3ZK0c" target="_blank" class="btn">4 Classes Package — $130</a>
-        <a href="https://buy.stripe.com/14AbJ0eUu35l1oUgxO3ZK0b" target="_blank" class="btn">8 Classes Package — $230</a>
-        <a href="https://buy.stripe.com/5kQ6oG3bM21hd7C3L23ZK06" target="_blank" class="btn">First 8 Classes Package — $150</a>
+        <button class="btn" onclick="openModal('Single Class', 35)">Single Class — $35</button>
+        <button class="btn" onclick="openModal('4 Classes Package', 130)">4 Classes Package — $130</button>
+        <button class="btn" onclick="openModal('8 Classes Package', 230)">8 Classes Package — $230</button>
+        <button class="btn" onclick="openModal('First 8 Classes Package (Discount)', 150)">First 8 Classes Package — $150</button>
       </div>
     </section>
 
-    <!-- Private Classes -->
     <section style="margin-bottom:60px;">
       <h3 style="color:#ff7b00;">🎬 Private Classes</h3>
-      <p style="color:#555; margin-top:10px; max-width:700px;">
-        Private sessions are customized for your child’s goals — from <strong>confidence and public speaking</strong> to <strong>scene work, audition prep, and camera performance</strong>. Class times are flexible and arranged individually.
-      </p>
-      <a href="https://buy.stripe.com/5kQ9AS8w66hx5Fa5Ta3ZK0d" target="_blank" class="btn">Purchase Private Class</a>
+      <p style="color:#555;">Private sessions customized for your child’s goals — confidence, audition prep, or camera performance.</p>
+      <button class="btn" onclick="openModal('Private Class', 60)">Purchase Private Class — $60</button>
     </section>
 
-    <!-- Cancellation Policy -->
-    <section style="margin-bottom:60px; background:#fff7ed; border-radius:16px; padding:25px 20px;">
-      <h3 style="color:#ff7b00;">📅 Cancellation & Make-Up Policy</h3>
-      <p style="color:#555; margin-top:10px; max-width:700px;">
-        Absences or reschedule requests must be made <strong>at least 24 hours in advance.</strong><br><br>
-        Each student receives <strong>one make-up class per package</strong> (subject to availability).<br><br>
-        <strong>No-shows or same-day cancellations</strong> are charged in full and cannot be rescheduled.
-      </p>
-    </section>
-
-    <!-- Call to Action -->
     <section style="text-align:center; margin-top:60px;">
       <h3 style="color:#ff7b00;">✨ Ready to Begin?</h3>
-      <p style="color:#555; max-width:600px; margin:10px auto 25px;">
-        Your child’s first trial class is completely free! Discover how fun and inspiring acting can be.
-      </p>
+      <p style="color:#555;">Your child’s first trial class is completely free!</p>
       <a href="index.html#book-class" class="btn">Book a Free Class</a>
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- MODAL -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <h3 style="color:#ff7b00; margin-bottom:10px;">Payment Instructions</h3>
+      <p id="classType" style="font-weight:600; color:#333; margin-bottom:15px;"></p>
+      <p id="paymentText" style="color:#555; line-height:1.6;"></p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
   <footer style="text-align:center; color:#777; padding:40px 12px;">
     © 2025 Bright Star Acting Studio · Brooklyn, NY
   </footer>
+
+  <script>
+    function openModal(className, amount) {
+      document.getElementById('paymentModal').style.display = 'flex';
+      document.getElementById('classType').innerText = className + ' — $' + amount;
+      document.getElementById('paymentText').innerHTML = `
+        To pay for <strong>${className}</strong>, please send <strong>$${amount}</strong> via <strong>Zelle</strong> to:<br><br>
+        📱 <strong>347-461-7236</strong><br>
+        ✉️ <strong>stalina.guberchenko@gmail.com</strong><br><br>
+        After payment, please send a <strong>confirmation screenshot</strong> to:<br>
+        📸 <strong>347-461-7236</strong> (text) or<br>
+        💌 <strong>brightstaractingstudio@gmail.com</strong><br><br>
+        Include your <strong>child’s name</strong> and <strong>class start date</strong> in the message.
+      `;
+    }
+
+    function closeModal() {
+      document.getElementById('paymentModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('paymentModal');
+      if (event.target == modal) modal.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
 
