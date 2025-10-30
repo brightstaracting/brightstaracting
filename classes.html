@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ===== META BASICS ===== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acting Classes & Pricing — Bright Star Acting Studio Brooklyn, NY</title>
@@ -68,6 +67,10 @@
       transition: background 0.3s ease;
     }
     .close-btn:hover { background: #ff922e; }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
@@ -93,6 +96,14 @@
     <p style="text-align:center; color:#555; max-width:700px; margin:0 auto 40px;">
       Fun, creative, and confidence-building acting classes where kids learn to express themselves on stage and on camera — guided by professional actress and teacher <strong>Stalina Guberchenko</strong>.
     </p>
+
+    <!-- 💰 Quick Pricing Highlight -->
+    <div style="text-align:center; background:#fff9f2; border-radius:14px; padding:15px 20px; margin:0 auto 40px; max-width:500px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+      <p style="margin:0; color:#333; font-size:1.05rem;">
+        💰 <strong>Group Classes from $35</strong> · <strong>Private Coaching Available</strong><br>
+        <a href="#pricing" style="color:#ff7b00; text-decoration:none; font-size:0.95rem;">Scroll down for full details & packages ↓</a>
+      </p>
+    </div>
 
     <!-- What We Teach -->
     <section style="margin-bottom:45px;">
@@ -120,7 +131,7 @@
     </section>
 
     <!-- Pricing -->
-    <section style="margin-bottom:45px;">
+    <section id="pricing" style="margin-bottom:45px;">
       <h3 style="color:#ff7b00;">💰 Pricing</h3>
       <p style="margin-top:10px;">
         <strong>First Trial Class:</strong> Free!<br>
@@ -155,7 +166,7 @@
     <section style="margin-bottom:60px;">
       <h3 style="color:#ff7b00;">🎬 Private Classes</h3>
       <p style="color:#555; margin-top:10px; max-width:700px;">
-        Private sessions are customized to each child’s individual goals — from <strong>confidence and public speaking</strong> to <strong>scene work, audition preparation, and acting for camera.</strong><br><br>
+        Private sessions are tailored to your child’s individual goals — from <strong>confidence and public speaking</strong> to <strong>scene work, audition preparation, and acting for camera.</strong><br><br>
         You can choose to take private lessons <strong>at the studio</strong> or <strong>at home / online</strong> for your convenience.
       </p>
       <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:10px;">
@@ -201,21 +212,40 @@
 
   <script>
     function openModal(className, amount) {
-      document.getElementById('paymentModal').style.display = 'flex';
-      document.getElementById('classType').innerText = className + ' — $' + amount;
-      document.getElementById('paymentText').innerHTML = `
-        To pay for <strong>${className}</strong>, please send <strong>$${amount}</strong> via <strong>Zelle</strong> to:<br><br>
+      const modal = document.getElementById('paymentModal');
+      const classText = document.getElementById('classType');
+      const paymentText = document.getElementById('paymentText');
+      modal.style.display = 'flex';
+      classText.innerText = className + ' — $' + amount;
+
+      let extraInfo = `
+        Include your <strong>child’s name</strong> and <strong>class start date</strong> in the message.
+      `;
+
+      if (className.toLowerCase().includes('private')) {
+        extraInfo = `
+          Please include your <strong>child’s name</strong>, <strong>goal of the class</strong> 
+          (for example: prepare for an audition, build public speaking confidence, etc.), and 
+          your <strong>preferred dates/times</strong> for the class.<br><br>
+          I will follow up to discuss details and schedule your class.
+        `;
+      }
+
+      paymentText.innerHTML = `
+        To pay for <strong>${className}</strong>, please send <strong style="color:#ff7b00;">$${amount}</strong> via <strong>Zelle</strong> to:<br><br>
         📱 <strong>347-461-7236</strong><br>
         ✉️ <strong>stalina.guberchenko@gmail.com</strong><br><br>
         After payment, please send a <strong>confirmation screenshot</strong> to:<br>
         📸 <strong>347-461-7236</strong> (text) or<br>
         💌 <strong>brightstaractingstudio@gmail.com</strong><br><br>
-        Include your <strong>child’s name</strong> and <strong>class start date</strong> in the message.
+        ${extraInfo}
       `;
     }
+
     function closeModal() {
       document.getElementById('paymentModal').style.display = 'none';
     }
+
     window.onclick = function(event) {
       const modal = document.getElementById('paymentModal');
       if (event.target == modal) modal.style.display = 'none';
