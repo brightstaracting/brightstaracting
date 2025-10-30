@@ -40,7 +40,7 @@
       background-color: rgba(0,0,0,0.6);
       justify-content: center;
       align-items: center;
-      overflow-y: auto; /* important for phones */
+      overflow-y: auto;
       padding: 20px;
     }
     .modal-content {
@@ -71,10 +71,11 @@
     }
     .close-btn:hover { background: #ff922e; }
 
-    /* ========== MOBILE FRIENDLY FIXES ========== */
     html, body {
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
+
     .container {
       width: 100%;
       max-width: 900px;
@@ -82,9 +83,10 @@
       margin: 0 auto;
     }
 
+    /* ========== RESPONSIVE FIXES ========== */
     @media (max-width: 768px) {
-      header h1 { font-size: 1.4rem; line-height: 1.4; }
-      .class-heading { font-size: 1.6rem; }
+      header h1 { font-size: 1.3rem; line-height: 1.4; }
+      .class-heading { font-size: 1.6rem; line-height: 1.3; }
       ul { padding-left: 20px; }
       li { margin-bottom: 8px; }
       .btn { display: block; width: 100%; text-align: center; margin-top: 10px; }
@@ -151,21 +153,121 @@
       </p>
     </section>
 
-    <!-- Pricing (rest of your content stays the same) -->
+    <!-- Pricing -->
     <section id="pricing">
       <h3 style="color:#ff7b00;">💰 Pricing</h3>
       <p style="margin-top:10px;">
         <strong>First Trial Class:</strong> Free!<br>
-        <em style="color:#777;">For new students trying Bright Star for the first time.</em>
+        <em style="color:#777;">For new students trying Bright Star for the first time.</em><br><br>
+
+        <strong>Single Class:</strong> $35<br>
+        <strong>4-Class Package:</strong> $130<br>
+        <strong>8-Class Package:</strong> $230<br>
       </p>
-      <!-- continue with your buttons and payment modals -->
+
+      <div style="background:#fff4e5; border-radius:16px; padding:15px 20px; margin:25px 0;">
+        <p style="margin:0;">
+          <strong style="color:#ff7b00;">First 8 Classes (Discount):</strong> $150<br>
+          <em style="color:#777;">35% off your child’s first month!</em>
+        </p>
+      </div>
+
+      <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:10px;">
+        <button class="btn" onclick="openModal('Single Class', 35)">Single Class — $35</button>
+        <button class="btn" onclick="openModal('4-Class Package', 130)">4-Class Package — $130</button>
+        <button class="btn" onclick="openModal('8-Class Package', 230)">8-Class Package — $230</button>
+        <button class="btn" onclick="openModal('First 8-Class Package (Discount)', 150)">First 8 Classes — $150</button>
+      </div>
+    </section>
+
+    <!-- Private Classes -->
+    <section style="margin-top:45px;">
+      <h3 style="color:#ff7b00;">🎬 Private Classes</h3>
+      <p style="color:#555; margin-top:10px; max-width:700px;">
+        Private sessions are tailored to your child’s individual goals — from <strong>confidence and public speaking</strong> to <strong>scene work, audition preparation, and acting for camera.</strong><br><br>
+        Available <strong>at the studio</strong> or <strong>at home / online</strong> for your convenience.
+      </p>
+      <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:10px;">
+        <button class="btn" onclick="openModal('Private Class (Studio)', 130)">Private Class (Studio) — $130</button>
+        <button class="btn" onclick="openModal('Private Class (Home/Online)', 80)">Private Class (Home/Online) — $80</button>
+      </div>
+    </section>
+
+    <!-- Cancellation -->
+    <section style="margin-top:45px; background:#fff7ed; border-radius:16px; padding:25px 20px;">
+      <h3 style="color:#ff7b00;">📅 Cancellation & Make-Up Policy</h3>
+      <p style="color:#555; margin-top:10px;">
+        Absences or reschedule requests must be made <strong>at least 24 hours in advance</strong>.<br>
+        Each student receives one make-up class per package (subject to availability).<br>
+        No-shows or same-day cancellations are charged in full.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align:center; margin-top:60px;">
+      <h3 style="color:#ff7b00;">✨ Ready to Begin?</h3>
+      <p style="color:#555; max-width:600px; margin:10px auto 25px;">
+        Your child’s first trial class is completely free! Discover how fun and inspiring acting can be.
+      </p>
+      <a href="index.html#book-class" class="btn">Book a Free Class</a>
     </section>
   </main>
 
+  <!-- ===== POPUP MODAL ===== -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <h3 style="color:#ff7b00; margin-bottom:10px;">Payment Instructions</h3>
+      <p id="classType" style="font-weight:600; color:#333; margin-bottom:15px;"></p>
+      <p id="paymentText" style="color:#555; line-height:1.6;"></p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
   <!-- ===== FOOTER ===== -->
-  <footer>
+  <footer style="text-align:center; color:#777; padding:40px 12px;">
     © 2025 Bright Star Acting Studio · Brooklyn, NY
   </footer>
+
+  <script>
+    function openModal(className, amount) {
+      const modal = document.getElementById('paymentModal');
+      const classText = document.getElementById('classType');
+      const paymentText = document.getElementById('paymentText');
+      modal.style.display = 'flex';
+      classText.innerText = className + ' — $' + amount;
+
+      let extraInfo = `
+        Include your <strong>child’s name</strong> and <strong>class start date</strong> in the message.
+      `;
+
+      if (className.toLowerCase().includes('private')) {
+        extraInfo = `
+          Please include your <strong>child’s name</strong>, <strong>goal of the class</strong> 
+          (e.g. prepare for an audition, build public speaking confidence, etc.), and 
+          your <strong>preferred dates/times</strong> for the class.<br><br>
+          I will follow up to discuss and schedule your class.
+        `;
+      }
+
+      paymentText.innerHTML = `
+        To pay for <strong>${className}</strong>, please send <strong style="color:#ff7b00;">$${amount}</strong> via <strong>Zelle</strong> to:<br><br>
+        📱 <strong>347-461-7236</strong><br>
+        ✉️ <strong>stalina.guberchenko@gmail.com</strong><br><br>
+        After payment, send a <strong>confirmation screenshot</strong> to:<br>
+        📸 <strong>347-461-7236</strong> (text) or 💌 <strong>brightstaractingstudio@gmail.com</strong><br><br>
+        ${extraInfo}
+      `;
+    }
+
+    function closeModal() {
+      document.getElementById('paymentModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('paymentModal');
+      if (event.target == modal) modal.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
 
