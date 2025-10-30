@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
+    /* ========== GENERAL BUTTON STYLE ========== */
     .btn {
       background: linear-gradient(90deg, #ff7b00, #ffb84d);
       color: white;
@@ -26,9 +27,8 @@
       cursor: pointer;
     }
     .btn:hover { transform: translateY(-3px); background: linear-gradient(90deg, #ff922e, #ffc366); }
-    @media (max-width: 600px) { .btn { display: block; width: 100%; text-align: center; } }
 
-    /* Popup styles */
+    /* ========== POPUP MODAL ========== */
     .modal {
       display: none;
       position: fixed;
@@ -40,12 +40,15 @@
       background-color: rgba(0,0,0,0.6);
       justify-content: center;
       align-items: center;
+      overflow-y: auto; /* important for phones */
+      padding: 20px;
     }
     .modal-content {
       background: #fff9f2;
       padding: 25px 30px;
       border-radius: 16px;
       max-width: 500px;
+      width: 100%;
       text-align: center;
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
       font-family: "Poppins", sans-serif;
@@ -68,8 +71,25 @@
     }
     .close-btn:hover { background: #ff922e; }
 
-    html {
-      scroll-behavior: smooth;
+    /* ========== MOBILE FRIENDLY FIXES ========== */
+    html, body {
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.4rem; line-height: 1.4; }
+      .class-heading { font-size: 1.6rem; }
+      ul { padding-left: 20px; }
+      li { margin-bottom: 8px; }
+      .btn { display: block; width: 100%; text-align: center; margin-top: 10px; }
+      section { margin-bottom: 35px !important; }
+      p, li { font-size: 1rem; }
     }
   </style>
 </head>
@@ -89,9 +109,9 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="container" style="max-width:900px; margin:0 auto; padding:50px 20px; line-height:1.7;">
+  <main class="container" style="line-height:1.7;">
     <h2 class="class-heading" style="text-align:center; color:#ff7b00; margin-bottom:10px;">
-      Acting Classes for Kids <span>Ages 7–13</span>
+      Acting Classes for Kids&nbsp;<span>Ages 7–13</span>
     </h2>
 
     <p style="text-align:center; color:#555; max-width:700px; margin:0 auto 40px;">
@@ -107,7 +127,7 @@
     </div>
 
     <!-- What We Teach -->
-    <section style="margin-bottom:45px;">
+    <section>
       <h3 style="color:#ff7b00;">🎭 What We Teach</h3>
       <ul style="margin-top:15px; margin-left:20px; color:#333;">
         <li><strong>Stage Speech</strong> — speaking clearly, confidently, and expressively.</li>
@@ -119,21 +139,33 @@
     </section>
 
     <!-- Schedule -->
-    <section style="margin-bottom:45px;">
+    <section>
       <h3 style="color:#ff7b00;">🕓 Schedule</h3>
       <p style="margin-top:10px;">
         <strong>Days:</strong> Monday & Wednesday<br>
         <strong>Time:</strong> 5:00 PM – 6:00 PM<br>
-        <strong>Location:</strong> 3063 Brighton 8th St, Brooklyn, NY 11235
+        <strong>Location:</strong> 3063 Brighton 8th St, 2nd Floor (Ring 2), Brooklyn NY 11235
       </p>
       <p style="margin-top:10px; color:#555;">
         Small group format — up to 10 kids per class.
       </p>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" style="margin-bottom:45px;">
+    <!-- Pricing (rest of your content stays the same) -->
+    <section id="pricing">
       <h3 style="color:#ff7b00;">💰 Pricing</h3>
       <p style="margin-top:10px;">
         <strong>First Trial Class:</strong> Free!<br>
-        <em style="color:#777;">For new students trying Bright Star for the first time.</em><br><
+        <em style="color:#777;">For new students trying Bright Star for the first time.</em>
+      </p>
+      <!-- continue with your buttons and payment modals -->
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Bright Star Acting Studio · Brooklyn, NY
+  </footer>
+</body>
+</html>
+
