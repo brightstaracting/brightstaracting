@@ -83,15 +83,10 @@
       margin: 0 auto;
     }
 
-    /* ===== SPACING FIX BELOW HEADER ===== */
-    .class-heading {
-      margin-top: 50px;
-    }
-
     /* ========== RESPONSIVE FIXES ========== */
     @media (max-width: 768px) {
       header h1 { font-size: 1.3rem; line-height: 1.4; }
-      .class-heading { font-size: 1.6rem; line-height: 1.3; margin-top: 40px; }
+      .class-heading { font-size: 1.6rem; line-height: 1.3; }
       ul { padding-left: 20px; }
       li { margin-bottom: 8px; }
       .btn { display: block; width: 100%; text-align: center; margin-top: 10px; }
@@ -133,10 +128,100 @@
       </p>
     </div>
 
-    <!-- Everything else unchanged -->
-    <!-- What We Teach / Schedule / Pricing / Private Classes / Modal / Footer -->
-    <!-- (Paste your sections here exactly as they are in your original code) -->
+    <!-- What We Teach -->
+    <section>
+      <h3 style="color:#ff7b00;">🎭 What We Teach</h3>
+      <ul style="margin-top:15px; margin-left:20px; color:#333;">
+        <li><strong>Stage Speech</strong> — speaking clearly, confidently, and expressively.</li>
+        <li><strong>Stage Movement</strong> — body awareness, posture, and coordination.</li>
+        <li><strong>Acting Games</strong> — developing imagination and teamwork.</li>
+        <li><strong>Improvisation & Character Work</strong> — building creativity and confidence.</li>
+        <li><strong>Acting for Camera</strong> — understanding presence and performance on screen.</li>
+      </ul>
+    </section>
+
+    <!-- Schedule -->
+    <section>
+      <h3 style="color:#ff7b00;">🕓 Schedule</h3>
+      <p style="margin-top:10px;">
+        <strong>Days:</strong> Monday & Wednesday<br>
+        <strong>Time:</strong> 5:00 PM – 6:00 PM<br>
+        <strong>Location:</strong> 3063 Brighton 8th St, 2nd Floor (Ring 2), Brooklyn NY 11235
+      </p>
+      <p style="margin-top:10px; color:#555;">
+        Small group format — up to 10 kids per class.
+      </p>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <h3 style="color:#ff7b00;">💰 Pricing</h3>
+      <p style="margin-top:10px;">
+        <strong>First Trial Class:</strong> Free!<br>
+        <em style="color:#777;">For new students trying Bright Star for the first time.</em><br><br>
+
+        <strong>Single Class:</strong> $35<br>
+        <strong>4-Class Package:</strong> $130<br>
+        <strong>8-Class Package:</strong> $230<br>
+      </p>
+
+      <div style="background:#fff4e5; border-radius:16px; padding:15px 20px; margin:25px 0;">
+        <p style="margin:0;">
+          <strong style="color:#ff7b00;">First 8 Classes (Discount):</strong> $150<br>
+          <em style="color:#777;">35% off your child’s first month!</em>
+        </p>
+      </div>
+
+      <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:10px;">
+        <button class="btn" onclick="openModal('Single Class', 35)">Single Class — $35</button>
+        <button class="btn" onclick="openModal('4-Class Package', 130)">4-Class Package — $130</button>
+        <button class="btn" onclick="openModal('8-Class Package', 230)">8-Class Package — $230</button>
+        <button class="btn" onclick="openModal('First 8-Class Package (Discount)', 150)">First 8 Classes — $150</button>
+      </div>
+    </section>
+
+    <!-- Private Classes -->
+    <section style="margin-top:45px;">
+      <h3 style="color:#ff7b00;">🎬 Private Classes</h3>
+      <p style="color:#555; margin-top:10px; max-width:700px;">
+        Private sessions are tailored to your child’s individual goals — from <strong>confidence and public speaking</strong> to <strong>scene work, audition preparation, and acting for camera.</strong><br><br>
+        Available <strong>at the studio</strong> or <strong>at home / online</strong> for your convenience.
+      </p>
+      <div style="margin-top:25px; display:flex; flex-wrap:wrap; gap:10px;">
+        <button class="btn" onclick="openModal('Private Class (Studio)', 130)">Private Class (Studio) — $130</button>
+        <button class="btn" onclick="openModal('Private Class (Home/Online)', 80)">Private Class (Home/Online) — $80</button>
+      </div>
+    </section>
+
+    <!-- Cancellation -->
+    <section style="margin-top:45px; background:#fff7ed; border-radius:16px; padding:25px 20px;">
+      <h3 style="color:#ff7b00;">📅 Cancellation & Make-Up Policy</h3>
+      <p style="color:#555; margin-top:10px;">
+        Absences or reschedule requests must be made <strong>at least 24 hours in advance</strong>.<br>
+        Each student receives one make-up class per package (subject to availability).<br>
+        No-shows or same-day cancellations are charged in full.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align:center; margin-top:60px;">
+      <h3 style="color:#ff7b00;">✨ Ready to Begin?</h3>
+      <p style="color:#555; max-width:600px; margin:10px auto 25px;">
+        Your child’s first trial class is completely free! Discover how fun and inspiring acting can be.
+      </p>
+      <a href="index.html#book-class" class="btn">Book a Free Class</a>
+    </section>
   </main>
+
+  <!-- ===== POPUP MODAL ===== -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <h3 style="color:#ff7b00; margin-bottom:10px;">Payment Instructions</h3>
+      <p id="classType" style="font-weight:600; color:#333; margin-bottom:15px;"></p>
+      <p id="paymentText" style="color:#555; line-height:1.6;"></p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer style="text-align:center; color:#777; padding:40px 12px;">
@@ -185,4 +270,3 @@
   </script>
 </body>
 </html>
-
